@@ -1,50 +1,34 @@
 <!DOCTYPE html>
 <html lang="vi">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
-<title>Dashboard Updater</title>
-<style>
-  * { box-sizing: border-box; margin: 0; padding: 0; }
-  html, body { width: 100%; height: 100%; overflow: hidden; background: #f8fafc; }
-  #loading {
-    position: fixed; inset: 0;
-    display: flex; flex-direction: column; align-items: center; justify-content: center;
-    gap: 12px;
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-    background: #f8fafc;
-    transition: opacity 0.3s ease;
-  }
-  #loading.hide { opacity: 0; pointer-events: none; }
-  .spinner {
-    width: 32px; height: 32px;
-    border: 3px solid #e5e7eb;
-    border-top-color: #6366f1;
-    border-radius: 50%;
-    animation: spin 0.7s linear infinite;
-  }
-  @keyframes spin { to { transform: rotate(360deg); } }
-  #loading p { font-size: 13px; color: #9ca3af; }
-  iframe {
-    position: fixed; inset: 0;
-    width: 100%; height: 100%;
-    border: none;
-  }
-</style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sale Daily Report</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: -apple-system, Arial, sans-serif;
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: #f9fafb;
+      color: #374151;
+      text-align: center;
+      padding: 20px;
+    }
+    a { color: #2563eb; text-decoration: none; }
+    a:hover { text-decoration: underline; }
+  </style>
 </head>
 <body>
-
-<div id="loading">
-  <div class="spinner"></div>
-  <p>Đang tải Dashboard Updater...</p>
-</div>
-
-<iframe
-  id="app-frame"
-  src="https://script.google.com/macros/s/AKfycby_BkX7HVi83auYwiYad5GK-zienNhBZjvLiNxnNEVC4IDTGdxzFYM7b3o50BltD_Op/exec"
-  allow="clipboard-write"
-  onload="document.getElementById('loading').classList.add('hide')">
-</iframe>
-
+  <p>
+    Đang chuyển vào hệ thống Sale Daily Report…<br>
+    Nếu không tự chuyển sau vài giây,
+    <a href="https://script.google.com/macros/s/AKfycby_BkX7HVi83auYwiYad5GK-zienNhBZjvLiNxnNEVC4IDTGdxzFYM7b3o50BltD_Op/exec">bấm vào đây</a>.
+  </p>
+  <script>
+    window.location.replace('https://script.google.com/macros/s/AKfycby_BkX7HVi83auYwiYad5GK-zienNhBZjvLiNxnNEVC4IDTGdxzFYM7b3o50BltD_Op/exec');
+  </script>
 </body>
 </html>
